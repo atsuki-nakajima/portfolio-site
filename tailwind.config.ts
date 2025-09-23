@@ -1,0 +1,16 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        'cinzel': ['var(--font-cinzel)', 'serif'],
+        'noto': ['var(--font-noto)', 'sans-serif'],
+      },
+      plugins: [],
+} satisfies Config;
