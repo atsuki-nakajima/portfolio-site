@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "biome format --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
@@ -16,6 +18,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -23,8 +26,16 @@
     "@types/react-dom": "^18.3.1",
     "eslint": "^9",
     "eslint-config-next": "15.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "biome format --write",
+      "eslint --fix"
+    ]
   }
 }

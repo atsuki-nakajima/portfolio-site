@@ -1,5 +1,7 @@
 import { Section } from "@/app/components/elements/Section";
 import { Strengths } from "./Strengths";
+import { ExperienceSection } from "./ExperienceSection";
+import { AboutSection } from "./AboutSection";
 import React from "react";
 
 /** 作品カード（埋め込みプレビュー + リンク） */
@@ -106,124 +108,9 @@ function WorkEmbedCard({ url, title, desc }: Work) {
 export function ContentSections() {
   return (
     <>
-      {/* 自己紹介 */}
-      <section id="about" className="scroll-mt-24 py-24 sm:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-yellow-200 drop-shadow-[0_2px_12px_rgba(240,215,123,0.15)] font-cinzel">
-            ・自己紹介
-          </h2>
-          <div className="mt-10 text-emerald-100/90 leading-relaxed space-y-6">
-            <p>
-              <strong className="font-bold text-yellow-100">
-                中島 敦輝（なかじま あつき）
-              </strong>
-              と申します。26歳、フロントエンドエンジニアとして活動しています。
-            </p>
-            <p>
-              「マーケティングの視点 × 技術力」を掛け合わせ、
-              広告運用とWeb制作の両面から成果を出すことを強みにしています。
-            </p>
-            <p>
-              学生時代はマーケティング戦略を学び、商品企画や産学連携プロジェクトに参加。
-              卒業後はGoogle広告の運用、人材紹介営業、フリーランスでのコーディング経験を経て、
-              現在は
-              <strong className="font-bold text-yellow-100">
-                Webサイト／業務システム／Chrome拡張機能
-              </strong>
-              の開発に携わりながら、企画から設計・実装・改善提案まで幅広く担当しています。
-            </p>
+      <AboutSection />
 
-            <hr className="!my-12 border-emerald-800/50" />
-
-            <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-yellow-200 font-cinzel mb-6 flex items-center gap-3">
-                <span className="text-2xl">💡</span>
-                私について一言でいうと？
-              </h3>
-              <blockquote className="border-l-4 border-yellow-700/80 bg-yellow-950/20 p-6 rounded-r-lg text-yellow-100/90">
-                <p className="font-semibold text-lg">
-                  「数字を見ながら改善提案もできる、手を動かすエンジニア」
-                </p>
-                <ul className="mt-4 space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-yellow-300" />
-                    <span>
-                      <strong className="text-yellow-200/90">
-                        広告運用経験とフロント実装力を両立
-                      </strong>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-yellow-300" />
-                    <span>
-                      <strong className="text-yellow-200/90">
-                        チームや顧客と対話しながら課題解決
-                      </strong>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-yellow-300" />
-                    <span>
-                      <strong className="text-yellow-200/90">
-                        改善提案〜実装まで一気通貫で担当
-                      </strong>
-                    </span>
-                  </li>
-                </ul>
-              </blockquote>
-            </div>
-
-            <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-yellow-200 font-cinzel mb-6 flex items-center gap-3">
-                <span className="text-2xl">🌱</span>
-                今後の目標
-              </h3>
-              <p>
-                広告運用・改善提案・コーディングのサイクルを高速に回し、
-                「この人となら成果を任せられる」と思ってもらえる人材になること。
-              </p>
-              <ul className="mt-8">
-                <span>
-                  <strong className="text-3xl text-yellow-200/90">
-                    数値分析 × コーディング × 改善提案
-                  </strong>
-                </span>
-              </ul>
-            </div>
-            <p className="!mt-10">
-              LOHA STYLE の「広告運用に強いチーム」においても、
-              これまでの経験と強みを活かして貢献できると考えています。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 現場経験 */}
-      <Section id="experience" title="・現場経験">
-        <ul className="space-y-6">
-          <li>
-            <p className="font-medium text-yellow-100/90">LLM AIウェブアプリ開発</p>
-            <p className="text-sm opacity-90">
-              画面実装と修正、新機能追加、Chrome拡張機能開発。設計修正〜実装〜テストを担当。
-              (React / TypeScript / AWS / GitLab etc...)
-            </p>
-          </li>
-          <li>
-            <p className="font-medium text-yellow-100/90">大手放送局向けクラウド移行</p>
-            <p className="text-sm opacity-90">
-              ユーザー登録画面や監視画面など新規4画面を開発。API連携やテストを担当。
-              (Vue3 / TypeScript / Vuetify / Docker etc...)
-            </p>
-          </li>
-          <li>
-            <p className="font-medium text-yellow-100/90">共済システム フロント開発</p>
-            <p className="text-sm opacity-90">
-              21画面の修正・単体/結合テスト。障害対応やカバレッジテストも実施。
-              (React / TypeScript / Jest / MySQL etc...)
-            </p>
-          </li>
-        </ul>
-      </Section>
+      <ExperienceSection />
 
       {/* 作品（埋め込みリンク表示） */}
       <Section id="works" title="作品">
@@ -240,6 +127,32 @@ export function ContentSections() {
       {/* スキルセット */}
       <Section id="skills" title="スキルセット">
         <div className="grid sm:grid-cols-2 gap-6">
+          {/* Especially Proficient */}
+          <div className="rounded-xl border border-yellow-600/50 p-5 bg-yellow-950/30 sm:col-span-2">
+            <p className="font-medium text-yellow-100/90 flex items-center gap-2">
+              <span className="text-lg">💡</span> 特に得意な技術スタック
+            </p>
+            <p className="text-xs mt-2 opacity-80">
+              以下の技術スタックはここ数年での使用頻度が高く、設計から実装、テストまで一貫して高いパフォーマンスを発揮できます。
+              その他スキルも基礎的なHTMLやCSS、Javascriptをメインで学んできたので柔軟に対応できます。
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+              {[
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Tailwind CSS",
+                "Git / GitHub",
+              ].map((s) => (
+                <li
+                  key={s}
+                  className="px-2.5 py-1 rounded-full bg-yellow-800/50 border border-yellow-600/50 font-semibold"
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </div>
           {/* Core Stack */}
           <div className="rounded-xl border border-emerald-800/50 p-5 bg-emerald-950/30">
             <p className="font-medium text-yellow-100/90 flex items-center gap-2">
@@ -404,8 +317,14 @@ export function ContentSections() {
 
       <Section id="summary" title="まとめ">
         <p>
-          ご覧いただきありがとうございます。ご要望に合わせて色味・フォント・装飾の世界観を調整します。
-          お気軽にご連絡ください。
+        最後までご覧いただきありがとうございます。
+
+        私の強みは「対話を大切にしながら、実装まで手を動かせること」です。  
+        広告運用 × 技術力という掛け算を武器に、改善提案から実装まで一気通貫で対応してきました。  
+
+        今後もチームの一員として成果に貢献するとともに、  
+        自ら学び、仲間と共に成長し続けたいと思っています。
+
         </p>
       </Section>
     </>

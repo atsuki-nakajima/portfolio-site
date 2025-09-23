@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: [
@@ -12,5 +13,20 @@ export default {
         'cinzel': ['var(--font-cinzel)', 'serif'],
         'noto': ['var(--font-noto)', 'sans-serif'],
       },
-      plugins: [],
+      typography: ({ theme }) => ({
+        invert: {
+          css: {
+            '--tw-prose-headings': theme('colors.yellow[200]'),
+            '--tw-prose-body': theme('colors.emerald[100]'),
+            '--tw-prose-links': theme('colors.yellow[400]'),
+            '--tw-prose-bullets': theme('colors.yellow[300]'),
+            '--tw-prose-quotes': theme('colors.emerald[100]'),
+            '--tw-prose-quote-borders': theme('colors.emerald[700]'),
+            '--tw-prose-strong': theme('colors.yellow[100]'),
+          },
+        },
+      }),
+    },
+  },
+  plugins: [typography],
 } satisfies Config;
