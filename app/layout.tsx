@@ -7,8 +7,8 @@ const cinzel = Cinzel({ subsets: ["latin"], weight: ["600","700","800"], variabl
 const noto = Noto_Sans_JP({ subsets: ["latin"], weight: ["400","500","700"], variable: "--font-noto" });
 
 export const metadata: Metadata = {
-  title: "Hero of Code — Portfolio",
-  description: "Zelda: Ocarina of Time inspired portfolio LP",
+  title: "Atsuki's — Portfolio",
+  description: "ポートフォリオサイト",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
