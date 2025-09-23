@@ -30,7 +30,7 @@ export default function ZeldaPortfolioLP() {
       <Scrim open={open} onClose={close} />
       
       <main className="pt-28">
-        <HeroSection items={MENU_ITEMS} onItemClick={scrollTo} />
+        <HeroSection />
         <ContentSections />
         <Footer />
       </main>
