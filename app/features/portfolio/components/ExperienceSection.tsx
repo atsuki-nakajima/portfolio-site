@@ -9,19 +9,22 @@ const experiences = [
 		title: "LLM AIウェブアプリ開発 (sattoプロジェクト)",
 		description:
 			"sattoプロジェクトにおける画面修正、新機能追加、およびChrome拡張機能の開発を担当。APIや画面仕様変更に伴う設計書の修正対応、画面レイアウト修正、実装、単体テストを実施。",
-		stack: "React / TypeScript / Node.js / AWS / GitLab / Vietest / tailwind / Electron etc...",
+		stack:
+			"React / TypeScript / Node.js / AWS / GitLab / Vietest / tailwind / Electron etc...",
 	},
 	{
 		title: "大手放送局向けクラウド移行 (操作画面開発)",
 		description:
 			"クラウド移行に伴う放送局操作画面のフロントエンド開発を担当。新規ユーザー登録画面、アラート監視画面を含む計4画面の設計、実装、単体テストを実施。設計書の処理仕様の動作確認にも従事。",
-		stack: "Vue.js 3 / TypeScript / Vuetify / Pinia / Docker / Redmine / Backlog etc...",
+		stack:
+			"Vue.js 3 / TypeScript / Vuetify / Pinia / Docker / Redmine / Backlog etc...",
 	},
 	{
 		title: "共済契約システム フロントエンド開発",
 		description:
 			"共済契約システムのフロントエンド開発において、前任者が作成した21画面の修正対応や単体テストコードの修正を実施。Jestを用いたカバレッジテスト、結合テスト、障害探索、DBの追加対応にも携わった。",
-		stack: "React / TypeScript / SCSS / Jest / SQL / node.js / A5:SQL Mk-2 etc...",
+		stack:
+			"React / TypeScript / SCSS / Jest / SQL / node.js / A5:SQL Mk-2 etc...",
 	},
 ];
 
