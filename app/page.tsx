@@ -12,30 +12,30 @@ import { useSmoothScroll } from "@/app/hooks/useSmoothScroll";
 import { MENU_ITEMS, COLORS } from "@/app/utils/constants";
 
 export default function ZeldaPortfolioLP() {
-  const { open, toggle, close } = useMenu();
-  const scrollTo = useSmoothScroll(close);
+	const { open, toggle, close } = useMenu();
+	const scrollTo = useSmoothScroll(close);
 
-  const bgStyle: React.CSSProperties = {
-    backgroundImage:
-      `radial-gradient(1200px 600px at 80% -10%, rgba(58,165,143,0.10), transparent 60%),` +
-      `radial-gradient(1000px 500px at 10% 20%, rgba(240,215,123,0.08), transparent 60%),` +
-      `linear-gradient(180deg, ${COLORS.night}, ${COLORS.forest})`,
-  };
+	const bgStyle: React.CSSProperties = {
+		backgroundImage:
+			`radial-gradient(1200px 600px at 80% -10%, rgba(58,165,143,0.10), transparent 60%),` +
+			`radial-gradient(1000px 500px at 10% 20%, rgba(240,215,123,0.08), transparent 60%),` +
+			`linear-gradient(180deg, ${COLORS.night}, ${COLORS.forest})`,
+	};
 
-  return (
-    <div className="min-h-screen text-emerald-50" style={{ ...bgStyle }}>
-      <GlobalCursor />
-      <Header open={open} toggle={toggle} />
-      <Menu open={open} items={MENU_ITEMS} onItemClick={scrollTo} />
-      <Scrim open={open} onClose={close} />
-      
-      <main className="pt-28">
-        <HeroSection />
-        <ContentSections />
-        <Footer />
-      </main>
+	return (
+		<div className="min-h-screen text-emerald-50" style={{ ...bgStyle }}>
+			<GlobalCursor />
+			<Header open={open} toggle={toggle} />
+			<Menu open={open} items={MENU_ITEMS} onItemClick={scrollTo} />
+			<Scrim open={open} onClose={close} />
 
-      <TriforceWatermark />
-    </div>
-  );
+			<main className="pt-28">
+				<HeroSection />
+				<ContentSections />
+				<Footer />
+			</main>
+
+			<TriforceWatermark />
+		</div>
+	);
 }
