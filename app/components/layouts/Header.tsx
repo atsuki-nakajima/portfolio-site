@@ -1,10 +1,8 @@
-"use client";
+'use client';
 import { TriforceButton } from "@/app/components/elements/TriforceButton";
 import { TriforceButtonProps } from "@/app/types";
 
-interface HeaderProps extends TriforceButtonProps {}
-
-export function Header({ open, toggle }: HeaderProps) {
+export function Header({ open, toggle }: TriforceButtonProps) {
   return (
     <header className="fixed top-0 inset-x-0 z-40">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -14,7 +12,7 @@ export function Header({ open, toggle }: HeaderProps) {
             <div className="absolute inset-0 opacity-40 bg-gradient-to-r from-transparent via-yellow-300/10 to-transparent" />
             <div className="relative h-full flex items-center px-4">
               <span className="text-yellow-200/90 font-semibold tracking-widest uppercase text-sm sm:text-base select-none font-cinzel">
-                Atsuki's — Portfolio
+                Atsuki&apos;s — Portfolio
               </span>
             </div>
           </div>
