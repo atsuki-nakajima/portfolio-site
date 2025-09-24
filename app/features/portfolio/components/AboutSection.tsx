@@ -125,7 +125,7 @@ export function AboutSection() {
             </ul>
           </motion.div>
           <motion.p variants={itemVariants} className="!mt-10">
-            LOHA STYLEさんの「広告運用に強いチーム」においても、
+            LOHA　STYLE様の「広告運用に強いチーム」においても、
             これまでの経験と強みを活かして貢献していきたいと考えています。
           </motion.p>
         </motion.div>
